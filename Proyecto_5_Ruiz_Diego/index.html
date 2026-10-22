@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarpiShop | Tienda de ropa</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/carrito.js" defer></script>
+</head>
+<body>
+  <aside class="menu">
+    <h2 class="logo">CarpiShop</h2>
+
+    <nav class="menu-opciones">
+      <button class="boton-menu active" data-categoria="Todos los productos">
+        <span>✦</span> Todos los productos
+      </button>
+      <button class="boton-menu" data-categoria="Abrigos">
+        <span>♧</span> Abrigos
+      </button>
+      <button class="boton-menu" data-categoria="Camisetas">
+        <span>♧</span> Camisetas
+      </button>
+      <button class="boton-menu" data-categoria="Pantalones">
+        <span>♧</span> Pantalones
+      </button>
+        <button class="boton-menu" data-categoria="Sudaderas">
+        <span>♧</span> Sudaderas
+      </button>
+        <button class="boton-menu" data-categoria="Zapatos">
+        <span>♧</span> Zapatos
+      </button>
+    </nav>
+
+    <button class="boton-carrito" id="boton-carrito">
+      <span>🛒</span> Carrito
+      <span class="numero-carrito" id="numero-carrito">0</span>
+    </button>
+
+    <p class="texto-footer">© 2026 CarpiShop</p>
+  </aside>
+
+  <main class="contenido">
+    <header class="encabezado-movil">
+      <h2 class="logo">CarpiShop</h2>
+      <button id="boton-carrito-movil">
+        🛒 Carrito (<span id="numero-carrito-movil">0</span>)
+      </button>
+    </header>
+
+    <section class="contenedor-productos" id="vista-catalogo">
+      <h1 id="titulo-principal">Todos los productos</h1>
+      <div class="contenedor-productos-grid" id="contenedor-productos"></div>
+    </section>
+
+    <section class="contenedor-productos oculto" id="vista-carrito">
+      <h1>Carrito</h1>
+
+      <div class="tabla-contenedor">
+        <table class="tabla-carrito">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Nombre</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="filas-carrito"></tbody>
+        </table>
+      </div>
+
+      <p class="carrito-vacio" id="mensaje-carrito-vacio">
+        Tu carrito está vacío. Agrega productos para verlos aquí.
+      </p>
+
+      <div class="acciones-carrito">
+        <button class="boton-secundario" id="vaciar-carrito">
+          VACIAR CARRITO
+        </button>
+
+        <div class="resumen-compra">
+          <p>Total: <strong id="total-pagina">$0</strong></p>
+          <button class="boton-finalizar" id="finalizar-compra">
+            COMPRAR AHORA
+          </button>
+        </div>
+      </div>
+
+      <p class="nota-demo">
+        Demo educativa: no procesa pagos reales.
+      </p>
+    </section>
+  </main>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+</body>
+</html>
